@@ -6,8 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     name: We test it locally with act
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2.4.2
+        
       - name: Get person name
         uses: ./ # Uses an action in the root directory
         id: person_name
         with:
-          person_name: 150
+          person_name: bella
