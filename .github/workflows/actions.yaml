@@ -1,26 +1,12 @@
-# - name: Get person name
-#   uses: ./ # Uses an action in the root directory
-#   id: person
-#   with:
-#     person_name: bella
-    
-
 on: [push]
 
 jobs:
   custom_test:
-    uses: ./.github/workflows/actions.yaml
-    name: Get Unity Version from UPM package
-    with:
-      build-target: ubuntu-latest
-      person_id: 150
-
-#     runs-on: ubuntu-latest
-#     name: Get person name
-#     steps:
-#       - name: Get person name
-#         uses: ./ # Uses an action in the root directory
-#         id: person
-#         with:
-#           person_id: 150
- 
+    runs-on: ubuntu-latest
+    name: Get person name
+    steps:
+      - name: Get person name
+        uses: ./ # Uses an action in the root directory
+        id: person
+        with:
+          person_id: 150
