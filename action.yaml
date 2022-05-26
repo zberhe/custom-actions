@@ -1,13 +1,13 @@
 # action.yaml
 name: "Blog Custom Github Action"
-description: "call agify API and get the result"
+description: "call agify API and get age"
 inputs:
   name:
     description: "get age based on name"
     required: true
     default: 1
 outputs:
-  pokemon_name:
+  age:
     description: "age of the named person"
 runs:
   using: "docker"
