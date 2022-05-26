@@ -1,6 +1,20 @@
-- name: Get person name
-  uses: ./ # Uses an action in the root directory
-  id: person
-  with:
-    person_name: bella
+# - name: Get person name
+#   uses: ./ # Uses an action in the root directory
+#   id: person
+#   with:
+#     person_name: bella
     
+
+on: [push]
+
+jobs:
+  custom_test:
+    runs-on: ubuntu-latest
+    name: Get person name
+    steps:
+      - name: Get person name
+        uses: ./ # Uses an action in the root directory
+        id: person
+        with:
+          person_id: 150
+ 
