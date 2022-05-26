@@ -11,6 +11,6 @@ jobs:
         
       - name: Get person name
         uses: ./ # Uses an action in the root directory
-        id: person_name
+        id: name
         with:
-          person_name: bella
+          name: bella
